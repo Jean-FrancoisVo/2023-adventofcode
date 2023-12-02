@@ -1,13 +1,13 @@
 fun main() {
     fun solvePart1(input: String): String {
         val regex = "\\d".toRegex()
-        val numbers = regex.findAll(input).toList()
+        val numbers = regex.findAll(input)
         return "${numbers.first().value}${numbers.last().value}"
     }
 
     fun solvePart2(input: String): String {
         val regex = "(?=(one|two|three|four|five|six|seven|eight|nine|\\d))".toRegex()
-        val numbers = regex.findAll(input).toList()
+        val numbers = regex.findAll(input)
         return "${numbers.first().groupValues[1].toDigit()}${numbers.last().groupValues[1].toDigit()}"
     }
 
