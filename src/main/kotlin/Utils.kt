@@ -32,3 +32,9 @@ fun String.toDigit(): String = when {
     this == "nine" -> "9"
     else -> this
 }
+
+fun <T> around(i: Int, j: Int, a: List<List<T>>) = listOf(
+    a[i - 1][j - 1], a[i - 1][j + 0], a[i - 1][j + 1],
+    a[i + 0][j - 1],                  a[i + 0][j + 1],
+    a[i + 1][j - 1], a[i + 1][j + 0], a[i + 1][j + 1],
+)
